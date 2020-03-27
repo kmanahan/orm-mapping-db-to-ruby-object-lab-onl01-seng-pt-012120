@@ -96,9 +96,8 @@ class Student
   
   def self.first_X_students_in_grade_10(x)
      sql = <<-SQL 
-      SELECT *
+      SELECT TOP(x)
       FROM students 
-      ORDER BY x ASC
       WHERE grade = 10 
       SQL
       DB[:conn].execute(sql, x).map do |row|
