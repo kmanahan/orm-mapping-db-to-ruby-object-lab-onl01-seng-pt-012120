@@ -99,7 +99,7 @@ class Student
       SELECT *
       FROM students 
       ORDER BY x 
-      WHERE x = ? 
+      WHERE grade = 10 
       SQL
       DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
