@@ -98,7 +98,7 @@ class Student
      sql = <<-SQL 
       SELECT FIRST(students)
       FROM students
-      WHERE grade = 10, x = ?
+      WHERE grade = 10 x = ?
       SQL
       DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
