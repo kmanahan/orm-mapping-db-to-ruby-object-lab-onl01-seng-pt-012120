@@ -96,7 +96,7 @@ class Student
   
   def self.first_X_students_in_grade_1
      sql = <<-SQL 
-      SELECT TOP 3
+      SELECT TOP ?
       FROM students 
       WHERE grade = 10 
       SQL
