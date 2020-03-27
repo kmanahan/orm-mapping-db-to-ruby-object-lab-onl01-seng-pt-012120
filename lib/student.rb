@@ -94,9 +94,9 @@ class Student
     end
   end 
   
-  def self.first_X_students_in_grade_10(row)
+  def self.first_X_students_in_grade_10
      sql = <<-SQL 
-      SELECT TOP row
+      SELECT TOP 
       FROM students 
       WHERE grade = 10 
       SQL
