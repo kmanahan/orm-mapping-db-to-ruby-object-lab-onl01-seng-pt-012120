@@ -94,7 +94,7 @@ class Student
     end
   end 
   
-  def self.first_X_students_in_grade_1
+  def self.first_X_students_in_grade_1(3)
      sql = <<-SQL 
       SELECT TOP 3
       FROM students 
