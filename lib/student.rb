@@ -97,7 +97,8 @@ class Student
   def self.first_X_students_in_grade_10(x)
      sql = <<-SQL 
       SELECT *
-      FROM students
+      FROM students 
+      ORDER BY 
       WHERE x = ? 
       SQL
       DB[:conn].execute(sql, x).map do |row|
