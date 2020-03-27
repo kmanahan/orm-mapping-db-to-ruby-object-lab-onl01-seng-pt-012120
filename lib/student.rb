@@ -94,10 +94,12 @@ class Student
     end
   end 
   
-  def self.first_X_students_in_grade_10(grade = 10)
+  def self.first_X_students_in_grade_10(x)
      sql = <<-SQL 
-      SELECT TOP(students)
+      SELECT TOP(x)
       FROM students 
+      ORDER BY x ASC
+      WHERE grade = 10 
       SQL
       DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
