@@ -95,7 +95,7 @@ class Student
   end 
   
   def self.first_X_students_in_grade_10(num:)
-    
+    @num = num
      sql = <<-SQL 
       SELECT TOP num:
       FROM students 
