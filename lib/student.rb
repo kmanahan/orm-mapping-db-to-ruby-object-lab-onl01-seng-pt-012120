@@ -94,10 +94,9 @@ class Student
     end
   end 
   
-  def self.first_X_students_in_grade_10(count)
-    count = Hash.new(0)
+  def self.first_X_students_in_grade_10(num)
      sql = <<-SQL 
-      SELECT TOP count
+      SELECT TOP num 
       FROM students 
       WHERE grade = 10 
       SQL
